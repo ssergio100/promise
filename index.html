@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <form action="javascript:void(0);" method="post">
+        <input type="text" name="campo1">
+        <input type="text" name="campo2">
+        <input type="submit" value="Enviar">
+    </form>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>
+        $('form').submit(function (e) {
+            e.preventDefault()
+
+            fazRequisicao('form')
+                .then(function (data) {
+                    carregaTabela(data)
+                })
+                .catch(function (data) {
+                    reportaErro()
+                })
+        })
+
+        function carregaTabela(data) {
+            console.log('carregando tabela')
+            console.log(data)
+        }
+
+        function reportaErro() {
+            alert('Ocorreu um erro')
+        }
+
+        function fazRequisicao(form) {
+            return new Promise((resolve, reject) => {
+                let data = $(form).serializeArray()
+                data.push({
+                    name: 'nome',
+                    value: 'sergio'
+                });
+                resolve(data)
+            });
+        }
+    </script>
+</body>
+
+</html>
