@@ -37,7 +37,7 @@
 
         function carregaTabela(data) {
             console.log('carregando tabela')
-            $('.info').html('dsdsds');
+            $('.info').html(data);
             
             console.log(data)
         }
@@ -53,7 +53,7 @@
                     name: 'nome',
                     value: 'sergio'
                 });
-                resolve(data)
+                resolve(JSON .stringify(data))
             });
         }
     </script>
