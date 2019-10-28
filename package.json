@@ -1,0 +1,23 @@
+{
+  "name": "testes",
+  "version": "1.0.0",
+  "description": "Arquivo para testar o comportamento de uma promise.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ssergio100/promise.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ssergio100/promise/issues"
+  },
+  "homepage": "https://github.com/ssergio100/promise#readme",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "sweetalert2": "^8.18.6"
+  }
+}
